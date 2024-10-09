@@ -33,3 +33,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+<main>
+        <section class="game-title">
+            <h1>Nama Games</h1>
+        </section>
+
+        <section class="materi">
+            <button class="arrow left">&#9664;</button>
+            <div class="content-box"></div>
+            <button class="arrow right">&#9654;</button>
+        </section>
+
+        <section class="games">
+            <h2>Games</h2>
+            <div class="game-options">
+                <button>Tebak Bunyi</button>
+                <button>Tebak Suara</button>
+                <button>Tebak Nama</button>
+            </div>
+        </section>
+
+        <section class="quiz">
+            <h2>Quiz</h2>
+            <button class="quiz-button">Asah Kemampuan Mu</button>
+        </section>
+    </main>
+</body>
+</html>
