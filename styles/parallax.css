@@ -1,8 +1,9 @@
-html{
+html {
     scroll-behavior: smooth;
 }
+
 .parallax-bg {
-    background-image: url('../images/bg1.jpeg');
+    background-image: url('../images/10_BgroundC.jpg');
     background-size: cover;
     background-attachment: fixed;
     height: 87.1vh;
@@ -31,4 +32,46 @@ html{
 .feature-icon {
     font-size: 4rem;
     color: #3B82F6;
+}
+
+main {
+    background: linear-gradient(to bottom, #f9d423, #ff4e50);
+    /* Gradasi kuning ke oranye */
+    padding: 50px 0;
+    margin-top: 100px; /* Sesuaikan dengan tinggi header */
+}
+
+.materi,
+.additional-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Latar belakang semi-transparan agar gradasi terlihat */
+    margin: 20px 0;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.content-box {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent box */
+    border-radius: 10px;
+}
+
+header{
+    position: fixed !important;
+    top: 0;
+    width: 100% !important;
+    z-index: 1000 !important; /* pastikan header berada di depan elemen lain */
 }
