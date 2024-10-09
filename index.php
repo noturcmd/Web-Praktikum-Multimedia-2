@@ -12,7 +12,7 @@
       <header class="navbar navbar-expand-lg navbar-light bg-light">
           <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
           <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
+            <li class="nav-item"> .
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
