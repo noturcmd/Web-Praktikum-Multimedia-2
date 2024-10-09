@@ -22,6 +22,9 @@
               <a class="nav-link" href="pages/Quiz/quiz.html">Quiz</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="pages/Quiz/quiz.html">Profile</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="pages/Quiz/quiz.html">About</a>
             </li>
           </ul>     
