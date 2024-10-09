@@ -2,10 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 .parallax-bg {
-    background-image: url('../images/icon-header-left.png');
+    background-image: url('../images/bg1.jpeg');
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 87.1vh;
     position: relative;
     background-position: center;
 }
