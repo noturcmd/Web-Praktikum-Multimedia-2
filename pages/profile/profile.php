@@ -24,10 +24,10 @@
           <a class="nav-link" href="../game/game.php">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="quiz.php">Quiz</a>
+          <a class="nav-link" href="../Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../profile/profile.php">Profile</a>
+          <a class="nav-link active" href="profile.php">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../about.php">About</a>
