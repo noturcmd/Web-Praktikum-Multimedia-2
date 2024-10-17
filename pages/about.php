@@ -13,16 +13,16 @@
           <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
           <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">Game</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/Quiz/quiz.html">Quiz</a>
+              <a class="nav-link" href="pages/Quiz/quiz.php">Quiz</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
+              <a class="nav-link active" href="about.php">About</a>
             </li>
           </ul>     
       </header>

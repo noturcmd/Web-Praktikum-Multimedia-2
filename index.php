@@ -18,19 +18,19 @@
       <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/Quiz/quiz.html">Quiz</a>
+          <a class="nav-link" href="pages/Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/Quiz/quiz.html">Profile</a>
+          <a class="nav-link" href="pages/Quiz/quiz.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/Quiz/quiz.html">About</a>
+          <a class="nav-link" href="pages/Quiz/quiz.php">About</a>
         </li>
       </ul>
     </header>
