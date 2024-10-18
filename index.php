@@ -21,6 +21,15 @@
       background-color: #008f5a;
       color: white;
     }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    /* Mengatur margin dan padding carousel */
+    #materi {
+      padding-bottom: 40px; /* Jarak bawah section */
+    }
   </style>
 </head>
 
@@ -57,12 +66,70 @@
     </section>
 
     <main>
-      <!-- Section Materi -->
-      <section id="materi">
-        <div class="container py-5">
+      <!-- Section Materi dengan Carousel -->
+      <section id="materi" class="py-5">
+        <div class="container">
           <h2 class="text-center mb-4">Materi</h2>
-          <p class="text-center">Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
-          <a href="pages/materi/materi.php" class="btn btn-custom d-block mx-auto mt-3">Lihat Materi</a>
+
+          <div id="materiCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Item 1 -->
+              <div class="carousel-item active">
+                <div class="row align-items-center materi-background">
+                  <!-- Bagian kiri (gambar) -->
+                  <div class="col-md-6">
+                    <img src="path/to/your-image1.jpg" alt="Materi 1" class="img-fluid">
+                  </div>
+                  <!-- Bagian kanan (informasi singkat) -->
+                  <div class="col-md-6">
+                    <p class="text-justify">Materi 1: Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
+                    <a href="pages/materi/materi.php?id=1" class="btn btn-custom mt-3">Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="carousel-item">
+                <div class="row align-items-center materi-background">
+                  <!-- Bagian kiri (gambar) -->
+                  <div class="col-md-6">
+                    <img src="path/to/your-image2.jpg" alt="Materi 2" class="img-fluid">
+                  </div>
+                  <!-- Bagian kanan (informasi singkat) -->
+                  <div class="col-md-6">
+                    <p class="text-justify">Materi 2: 
+                      Untuk menempatkan carousel-item di luar section materi, kita bisa membuat struktur HTML di mana section dan carousel menjadi dua elemen terpisah, tetapi tetap menjaga tampilan dan fungsionalitas. Berikut adalah versi yang diperbarui dari kode yang memindahkan carousel-item di luar section materi tetapi masih mencakup semua konten yang relevan.</p>
+                    <a href="pages/materi/materi.php?id=2" class="btn btn-custom mt-3">Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="carousel-item">
+                <div class="row align-items-center materi-background">
+                  <!-- Bagian kiri (gambar) -->
+                  <div class="col-md-6">
+                    <img src="path/to/your-image3.jpg" alt="Materi 3" class="img-fluid">
+                  </div>
+                  <!-- Bagian kanan (informasi singkat) -->
+                  <div class="col-md-6">
+                    <p class="text-justify">Materi 3: Asah pemahamanmu dengan materi yang lebih menantang.</p>
+                    <a href="pages/materi/materi.php?id=3" class="btn btn-custom mt-3">Selengkapnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigasi Kiri-Kanan -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#materiCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#materiCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -83,14 +150,10 @@
           <a href="pages/quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3">Mulai Quiz</a>
         </div>
       </section>
-
-      <!-- Elemen lain di dalam main -->
-      <section class="additional-section">
-        <h2>Additional Content</h2>
-        <p>This section also inherits the background gradient from the main element.</p>
-      </section>
     </main>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body
+</body>
+
+</html>
