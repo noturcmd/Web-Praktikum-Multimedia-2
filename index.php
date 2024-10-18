@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="styles/parallax.css">
+  <style>
+    .btn-custom {
+      background-color: #00a676;
+      color: white;
+      width: 200px;
+    }
+
+    .btn-custom:hover {
+      background-color: #008f5a;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
@@ -45,10 +57,31 @@
     </section>
 
     <main>
-      <section class="materi" id="materi">
-        <button class="arrow left">&#9664;</button>
-        <div class="content-box"></div>
-        <button class="arrow right">&#9654;</button>
+      <!-- Section Materi -->
+      <section id="materi">
+        <div class="container py-5">
+          <h2 class="text-center mb-4">Materi</h2>
+          <p class="text-center">Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
+          <a href="pages/materi/materi.php" class="btn btn-custom d-block mx-auto mt-3">Lihat Materi</a>
+        </div>
+      </section>
+
+      <!-- Section Game -->
+      <section id="game">
+        <div class="container py-5">
+          <h2 class="text-center mb-4">Game</h2>
+          <p class="text-center">Asah kemampuanmu dengan berbagai game edukatif yang seru!</p>
+          <a href="pages/game/game.php" class="btn btn-custom d-block mx-auto mt-3">Mainkan Game</a>
+        </div>
+      </section>
+
+      <!-- Section Quiz -->
+      <section id="quiz">
+        <div class="container py-5">
+          <h2 class="text-center mb-4">Quiz</h2>
+          <p class="text-center">Uji pengetahuanmu dengan berbagai quiz yang menantang.</p>
+          <a href="pages/quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3">Mulai Quiz</a>
+        </div>
       </section>
 
       <!-- Elemen lain di dalam main -->
@@ -60,6 +93,4 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-
-</html>
+</body
