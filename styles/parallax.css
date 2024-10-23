@@ -34,13 +34,6 @@ html {
     color: #3B82F6;
 }
 
-main {
-    background: linear-gradient(to bottom, #f9d423, #ff4e50);
-    /* Gradasi kuning ke oranye */
-    padding: 50px 0;
-    margin-top: 100px; /* Sesuaikan dengan tinggi header */
-}
-
 .materi,
 .additional-section {
     padding: 20px;

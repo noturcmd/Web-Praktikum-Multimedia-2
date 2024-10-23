@@ -1,8 +1,6 @@
-
-
 .hover-white:hover {
     background-color: white;
-    color: black ;
+    color: black;
     border-radius: 20px;
 }
 
@@ -13,6 +11,18 @@
 main {
     text-align: center;
     padding: 20px;
+}
+
+header{
+    background-color: lightskyblue;
+}
+
+header img{
+    margin-left: 20px;
+}
+
+header ul{
+    margin-left: 20px;
 }
 
 .game-title h1 {
@@ -71,4 +81,23 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.btn-custom {
+    background-color: #00a676;
+    color: white;
+    width: 200px;
+}
+
+.btn-custom:hover {
+    background-color: #008f5a;
+    color: white;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+#materi {
+    padding-bottom: 40px;
 }

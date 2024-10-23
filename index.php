@@ -11,47 +11,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="styles/parallax.css">
   <style>
-    .btn-custom {
-      background-color: #00a676;
-      color: white;
-      width: 200px;
-    }
-
-    .btn-custom:hover {
-      background-color: #008f5a;
-      color: white;
-    }
-
-    .text-justify {
-      text-align: justify;
-    }
-
-    /* Mengatur margin dan padding carousel */
-    #materi {
-      padding-bottom: 40px; /* Jarak bawah section */
-    }
+    
   </style>
 </head>
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light bg-warning">
+    <header class="navbar navbar-expand-lg navbar-light">
       <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active fw-bold" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/game/game.php">Game</a>
+          <a class="nav-link fw-bold" href="pages/game/game.php">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/Quiz/quiz.php">Quiz</a>
+          <a class="nav-link fw-bold" href="pages/Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/profile/profile.php">Profile</a>
+          <a class="nav-link fw-bold" href="pages/profile/profile.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/about.php">About</a>
+          <a class="nav-link fw-bold" href="pages/about.php">About</a>
         </li>
       </ul>
     </header>
@@ -59,7 +41,7 @@
     <section class="parallax-bg">
       <div class="parallax-overlay"></div>
       <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Luminara Library</h1>
+        <h1 class="display-3 fw-bold mb-4">Welcome to Our Website</h1>
         <p class="text-xl">Your Gateway to Unlimited Knowledge</p>
         <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Explore Now</a>
       </div>
