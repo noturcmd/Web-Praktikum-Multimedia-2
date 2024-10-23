@@ -3,7 +3,7 @@ html {
 }
 
 .parallax-bg {
-    background-image: url('../images/10_BgroundC.jpg');
+    background-image: url('../images/bg_2.jpg');
     background-size: cover;
     background-attachment: fixed;
     height: 87.1vh;
@@ -34,7 +34,6 @@ html {
     color: #3B82F6;
 }
 
-.materi,
 .additional-section {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);

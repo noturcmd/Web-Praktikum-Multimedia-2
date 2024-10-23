@@ -35,26 +35,16 @@
       </ul>
     </header>
 
-    <section class="parallax-bg">
-      <div class="parallax-overlay"></div>
-      <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Luminara Library</h1>
-        <p class="text-xl">Your Gateway to Unlimited Knowledge</p>
-        <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Explore Now</a>
-      </div>
-    </section>
-
     <main>
-      <section class="materi" id="materi">
-        <button class="arrow left">&#9664;</button>
-        <div class="content-box"></div>
-        <button class="arrow right">&#9654;</button>
+      <section class="parallax-bg">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content animate__animated animate__fadeInDown">
+          <h1 class="text-5xl font-bold mb-4">See Our Profile</h1>
+          <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Explore Now</a>
+        </div>
       </section>
-
-      <!-- Elemen lain di dalam main -->
-      <section class="additional-section">
-        <h2>Additional Content</h2>
-        <p>This section also inherits the background gradient from the main element.</p>
+      <section>
+        <h2>Hello World!</h2>
       </section>
     </main>
   </div>
