@@ -14,23 +14,23 @@
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light bg-warning">
+    <header class="navbar navbar-expand-lg navbar-light">
       <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
+          <a class="nav-link fw-bold" aria-current="page" href="../../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="pages/game/game.php">Game</a>
+          <a class="nav-link fw-bold active" href="pages/game/game.php">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../Quiz/quiz.php">Quiz</a>
+          <a class="nav-link fw-bold" href="../Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../profile/profile.php">Profile</a>
+          <a class="nav-link fw-bold" href="../profile/profile.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../about.php">About</a>
+          <a class="nav-link fw-bold" href="../about.php">About</a>
         </li>
       </ul>
     </header>
@@ -38,9 +38,9 @@
     <section class="parallax-bg">
       <div class="parallax-overlay"></div>
       <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Luminara Library</h1>
-        <p class="text-xl">Your Gateway to Unlimited Knowledge</p>
-        <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Explore Now</a>
+        <h1 class="text-5xl font-bold mb-4">Play the Game</h1>
+        <p class="text-xl">Increase Your Knowledge</p>
+        <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Play Now</a>
       </div>
     </section>
 

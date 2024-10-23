@@ -14,23 +14,23 @@
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light bg-warning">
+    <header class="navbar navbar-expand-lg navbar-light">
       <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link fw-bold" aria-current="page" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/game/game.php">Game</a>
+          <a class="nav-link fw-bold" href="game/game.php">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/Quiz/quiz.php">Quiz</a>
+          <a class="nav-link fw-bold" href="Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="profile/profile.php">Profile</a>
+          <a class="nav-link fw-bold" href="profile/profile.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="pages/about.php">About</a>
+          <a class="nav-link fw-bold active" href="pages/about.php">About</a>
         </li>
       </ul>
     </header>
