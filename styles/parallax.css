@@ -5,8 +5,7 @@ html {
 .parallax-bg {
     background-image: url('../images/bg_2.jpg');
     background-size: cover;
-    background-attachment: fixed;
-    height: 87.1vh;
+    height: 100vh;
     position: relative;
     background-position: center;
 }

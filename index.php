@@ -17,23 +17,23 @@
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light">
+    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center">
       <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link active fw-bold" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link fw-bold text-white text-decoration-underline" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="pages/game/game.php">Game</a>
+          <a class="nav-link fw-bold text-white" href="pages/game/game.php">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="pages/Quiz/quiz.php">Quiz</a>
+          <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="pages/profile/profile.php">Profile</a>
+          <a class="nav-link fw-bold text-white" href="pages/profile/profile.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="pages/about.php">About</a>
+          <a class="nav-link fw-bold text-white" href="pages/about.php">About</a>
         </li>
       </ul>
     </header>
@@ -50,7 +50,7 @@
     <main id="section-materi">
       <section id="materi" class="py-5">
         <div class="container">
-          <h2 class="text-center mb-4">Materi</h2>
+          <h2 class="text-center mb-4 text-white">Materi</h2>
 
           <div id="materiCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -63,8 +63,8 @@
                   </div>
                   <!-- Bagian kanan (informasi singkat) -->
                   <div class="col-md-6">
-                    <p class="text-justify">Materi 1: Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
-                    <a href="pages/materi/materi.php?id=1" class="btn btn-custom mt-3">Selengkapnya</a>
+                    <p class="text-justify text-white">Materi 1: Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
+                    <a href="pages/materi/materi.php?id=1" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -78,9 +78,9 @@
                   </div>
                   <!-- Bagian kanan (informasi singkat) -->
                   <div class="col-md-6">
-                    <p class="text-justify">Materi 2: 
+                    <p class="text-justify text-white">Materi 2: 
                       Untuk menempatkan carousel-item di luar section materi, kita bisa membuat struktur HTML di mana section dan carousel menjadi dua elemen terpisah, tetapi tetap menjaga tampilan dan fungsionalitas. Berikut adalah versi yang diperbarui dari kode yang memindahkan carousel-item di luar section materi tetapi masih mencakup semua konten yang relevan.</p>
-                    <a href="pages/materi/materi.php?id=2" class="btn btn-custom mt-3">Selengkapnya</a>
+                    <a href="pages/materi/materi.php?id=2" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -94,8 +94,8 @@
                   </div>
                   <!-- Bagian kanan (informasi singkat) -->
                   <div class="col-md-6">
-                    <p class="text-justify">Materi 3: Asah pemahamanmu dengan materi yang lebih menantang.</p>
-                    <a href="pages/materi/materi.php?id=3" class="btn btn-custom mt-3">Selengkapnya</a>
+                    <p class="text-justify text-white">Materi 3: Asah pemahamanmu dengan materi yang lebih menantang.</p>
+                    <a href="pages/materi/materi.php?id=3" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -104,11 +104,11 @@
             <!-- Navigasi Kiri-Kanan -->
             <button class="carousel-control-prev" type="button" data-bs-target="#materiCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden text-white">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#materiCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden text-white">Next</span>
             </button>
           </div>
         </div>
@@ -117,18 +117,18 @@
       <!-- Section Game -->
       <section id="game">
         <div class="container py-5">
-          <h2 class="text-center mb-4">Game</h2>
-          <p class="text-center">Asah kemampuanmu dengan berbagai game edukatif yang seru!</p>
-          <a href="pages/game/game.php" class="btn btn-custom d-block mx-auto mt-3">Mainkan Game</a>
+          <h2 class="text-center mb-4 text-white">Game</h2>
+          <p class="text-center text-white">Asah kemampuanmu dengan berbagai game edukatif yang seru!</p>
+          <a href="pages/game/game.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mainkan Game</a>
         </div>
       </section>
 
       <!-- Section Quiz -->
       <section id="quiz">
         <div class="container py-5">
-          <h2 class="text-center mb-4">Quiz</h2>
-          <p class="text-center">Uji pengetahuanmu dengan berbagai quiz yang menantang.</p>
-          <a href="pages/quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3">Mulai Quiz</a>
+          <h2 class="text-center mb-4 text-white">Quiz</h2>
+          <p class="text-center text-white">Uji pengetahuanmu dengan berbagai quiz yang menantang.</p>
+          <a href="pages/quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mulai Quiz</a>
         </div>
       </section>
     </main>
