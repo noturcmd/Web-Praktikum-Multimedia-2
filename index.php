@@ -1,3 +1,11 @@
+<?php
+include "connection/db_connection.php";
+
+
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -138,3 +146,5 @@
 </body>
 
 </html>
+
+<?php $koneksi = null?>

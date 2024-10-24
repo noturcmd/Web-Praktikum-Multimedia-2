@@ -26,7 +26,7 @@
           <a class="nav-link fw-bold" href="../Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold active" href="profile.php">Profile</a>
+          <a class="nav-link fw-bold text-decoration-underline" href="profile.php">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold" href="../about.php">About</a>
@@ -34,16 +34,31 @@
       </ul>
     </header>
 
-    <main>
-      <ul>
-        <li><?= "Username"?></li>
-        <li><?= "Username"?></li>
-        <li></li>
-      </ul>
+    <main class="container mt-5">
+      <div class="card shadow-lg">
+        <div class="card-header text-center">
+          <h3 class="fw-bold">User Profile</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="fw-bold">Username</span>
+            <span><?= "Username" ?></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="fw-bold">Email</span>
+            <span><?= "user@example.com" ?></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="fw-bold">Joined Date</span>
+            <span><?= "2024-10-24" ?></span>
+          </li>
+        </ul>
+      </div>
     </main>
-    
 
-    
+
+
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
