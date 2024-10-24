@@ -1,11 +1,11 @@
 <?php
 include "../../connection/db_connection.php";
 
-$query = "SELECT * FROM users where id=1";
+$query = "SELECT *, DATE_FORMAT(created_at,'%d/%m/%Y') AS tanggal  FROM users where id=1";
 $stm = $koneksi->prepare($query);
 $stm->execute();
-
-var_dump($stm->fetch());
+$user = $stm->fetch();
+// var_dump($user);
 ?>
 
 
@@ -50,22 +50,51 @@ var_dump($stm->fetch());
         <div class="card-header text-center">
           <h3 class="fw-bold">User Profile</h3>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="fw-bold">Username</span>
-            <span><?=  ?></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="fw-bold">Email</span>
-            <span><?= "user@example.com" ?></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="fw-bold">Joined Date</span>
-            <span><?= "2024-10-24" ?></span>
-          </li>
-        </ul>
+        <form>
+          <img src="../../img-users/no-photo.jpg" alt="User Photo" class="img-fluid rounded mx-auto d-block mb-3 mt-3" style="width: 150px; height: auto;">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <input type="hidden" class="form-control-plaintext text-end" id="id" value="<?= $user[0] ?>" readonly>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <label for="username" class="fw-bold text-start" style="width: 150px;">Username</label>
+                  <input type="text" class="form-control-plaintext text-end" id="username" value="<?= $user[1] ?>" readonly>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <label for="email" class="fw-bold text-start" style="width: 150px;">Email</label>
+                  <input type="text" class="form-control-plaintext text-end fst-italic" id="email" value="<?= empty($user[3]) ? 'Tidak ada email' : $user[3] ?>" readonly>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <label for="joinedDate" class="fw-bold text-start" style="width: 150px;">Joined Date</label>
+                  <input type="text" class="form-control-plaintext text-end" id="joinedDate" value="<?= $user[12] ?>" readonly>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <label for="level_hewan" class="fw-bold text-start" style="width: 350px;">Level Quiz Hewan (dicapai)</label>
+                  <input type="text" class="form-control-plaintext text-end" id="level_hewan" value="<?= $user[5] ?> | <?= $user[9] ?>" readonly>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <label for="text" class="fw-bold text-start" style="width: 4000px;">Level Quiz Tumbuhan (dicapai)</label>
+                  <input type="text" class="form-control-plaintext text-end" id="text" value="<?= $user[5] ?> | <?= $user[10] ?>" readonly>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <label for="level-game" class="fw-bold text-start" style="width: 350px;">Level Game (dicapai)</label>
+                  <input type="text" class="form-control-plaintext text-end" id="level-game" value="<?= $user[7] ?> | <?= $user[11] ?>" readonly>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+
+
       </div>
     </main>
+
+
 
 
 
