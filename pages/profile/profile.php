@@ -1,3 +1,14 @@
+<?php
+include "../../connection/db_connection.php";
+
+$query = "SELECT * FROM users where id=1";
+$stm = $koneksi->prepare($query);
+$stm->execute();
+
+var_dump($stm->fetch());
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +24,7 @@
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light">
+    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center">
       <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
@@ -42,7 +53,7 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item d-flex justify-content-between align-items-center">
             <span class="fw-bold">Username</span>
-            <span><?= "Username" ?></span>
+            <span><?=  ?></span>
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-center">
             <span class="fw-bold">Email</span>
