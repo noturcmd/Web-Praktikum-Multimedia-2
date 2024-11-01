@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Materi</title>
+  <link rel="shortcut icon" href="../../logo/logo_mulmed.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../../styles/style1.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -14,17 +15,21 @@
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-dark">
-      <img src="../../images/icon-header-left.png" alt="icon-owl" width="80">
+    <!-- Header yang diselaraskan dengan index.php -->
+    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-black">
+      <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill lead">
         <li class="nav-item">
           <a class="nav-link fw-bold text-white link-secondary" aria-current="page" href="../../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="../game/game.php">Game</a>
+          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="../materi/materi.php">Materi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../Quiz/quiz.php">Quiz</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="../game/game.php">Game</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a>
@@ -35,6 +40,7 @@
       </ul>
     </header>
 
+    <!-- Konten lainnya tetap sama -->
     <section class="parallax-bg">
       <div class="parallax-overlay"></div>
       <div class="parallax-content animate__animated animate__fadeInDown">
@@ -51,7 +57,6 @@
         <button class="arrow right">&#9654;</button>
       </section>
 
-      <!-- Elemen lain di dalam main -->
       <section class="additional-section">
         <h2>Additional Content</h2>
         <p>This section also inherits the background gradient from the main element.</p>
