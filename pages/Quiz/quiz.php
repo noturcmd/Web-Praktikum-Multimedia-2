@@ -20,7 +20,7 @@
           <a class="nav-link fw-bold" aria-current="page" href="../../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="pages/game/game.php">Game</a>
+          <a class="nav-link fw-bold" href="../game/game.php">Game</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold active" href="../Quiz/quiz.php">Quiz</a>

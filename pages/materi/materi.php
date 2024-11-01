@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game</title>
+  <title>Materi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../../styles/style1.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -21,7 +21,7 @@
           <a class="nav-link fw-bold text-white link-secondary" aria-current="page" href="../../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="game.php">Game</a>
+          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="../game/game.php">Game</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold text-white link-secondary" href="../Quiz/quiz.php">Quiz</a>
