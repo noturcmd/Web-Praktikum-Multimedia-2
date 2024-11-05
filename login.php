@@ -23,9 +23,8 @@
               <div class="card-body p-md-5 mx-md-4">
 
                 <div class="text-center">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                  <img src="logo/logo_mulmed.png" alt="icon-owl" width="120">
+                  <h4 class="mt-1 mb-5 pb-1">Beastie Brain Tease</h4>
                 </div>
 
                 <form>
@@ -33,7 +32,7 @@
 
                   <div data-mdb-input-init class="form-outline mb-4">
                     <input type="email" id="form2Example11" class="form-control"
-                      placeholder="Phone number or email address" />
+                      placeholder="User ID or email address" />
                     <label class="form-label" for="form2Example11">Username</label>
                   </div>
 
