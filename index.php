@@ -48,6 +48,7 @@ include "connection/db_connection.php";
           <a class="nav-link fw-bold text-white link-secondary" href="pages/about.php">About</a>
         </li>
       </ul>
+    
     </header>
 
     <section class="parallax-bg m-0 p-0">
