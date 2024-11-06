@@ -41,19 +41,21 @@
     </header>
 
     <!-- Konten lainnya tetap sama -->
-    <section class="parallax-bg">
+    <section class="parallax-bg m-0 p-0">
       <div class="parallax-overlay"></div>
       <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="text-5xl font-bold mb-4">Play the Game</h1>
-        <p class="text-xl">Increase Your Knowledge</p>
-        <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Play Now</a>
+        <h1 class="display-2 fw-bold mb-4 text-warning">Materi Pembelajaran</h1>
+        <p class="display-6 text-white">Tingkatkan Pengetahuanmu</p>
+        <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 h3">Mari belajar, semoga ilmunya bermanfaat!</a>
       </div>
     </section>
 
     <main>
       <section class="materi" id="materi">
         <button class="arrow left">&#9664;</button>
-        <div class="content-box"></div>
+        <div class="content-box">
+          <img src="" alt="">
+        </div>
         <button class="arrow right">&#9654;</button>
       </section>
 
@@ -69,37 +71,42 @@
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi PHP Dasar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 16px;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi PHP Dasar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
     <?php
     // Mendefinisikan variabel untuk judul dan isi materi
     $judul = "Materi PHP Dasar";
@@ -109,9 +116,10 @@
     echo "<h1>$judul</h1>";
     echo "<p>$isi</p>";
     ?>
-</div>
+  </div>
 
 </body>
+
 </html>
 
 

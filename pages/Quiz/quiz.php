@@ -2,6 +2,17 @@
 
 session_start();
 
+include "../../connection/db_connection.php";
+$query = "SELECT * FROM soal";
+$stm = $koneksi->prepare($query);
+$stm->execute();
+$user = $stm->fetch();
+var_dump($user["opsi"]);
+
+$opsi = explode(";", $user["opsi"]);
+var_dump($opsi);
+
+
 $questions = array(
   array(
     'question' => 'Apa nama hewan yang memiliki punuk dan tinggal di gurun pasir?',
@@ -14,6 +25,22 @@ $questions = array(
     'correct' => 'Jupiter'
   )
 );
+
+$question = [];
+
+for ($i=0; $i < 1; $i++) { 
+  $question['question'] = "Siapa nama ku?";
+  $opsi2 = [];
+  foreach ($opsi as $value) {
+    $opsi2[] = $value;
+  }
+  $question['options'] = $opsi2;
+}
+
+$questions[] = $question;
+
+var_dump($questions);
+exit();
 
 $current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
 
