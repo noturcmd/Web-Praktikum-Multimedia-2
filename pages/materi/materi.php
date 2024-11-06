@@ -67,4 +67,52 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi PHP Dasar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <?php
+    // Mendefinisikan variabel untuk judul dan isi materi
+    $judul = "Materi PHP Dasar";
+    $isi = "PHP adalah bahasa pemrograman server-side yang digunakan untuk membuat halaman web dinamis. PHP dapat berintegrasi dengan berbagai jenis database, seperti MySQL.";
+
+    // Menampilkan judul dan isi materi
+    echo "<h1>$judul</h1>";
+    echo "<p>$isi</p>";
+    ?>
+</div>
+
+</body>
+</html>
+
+
 </html>

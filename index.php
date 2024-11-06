@@ -36,7 +36,7 @@ include "connection/db_connection.php";
           <a class="nav-link fw-bold text-white link-secondary" href="pages/materi/materi.php">Materi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/game/game.php">Game</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="pages/game/game2/game2.php">Game</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold text-white link-secondary" href="pages/Quiz/quiz.php">Quiz</a>

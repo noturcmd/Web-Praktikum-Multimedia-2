@@ -4,37 +4,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About</title>
-  <link rel="shortcut icon" href="../logo/logo_mulmed.png" type="image/x-icon">
+  <title>Home</title>
+  <link rel="shortcut icon" href="logo/logo_mulmed.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles/style1.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="../styles/parallax.css">
+  <link rel="stylesheet" href="styles/parallax.css">
+  <link rel="stylesheet" href="styles/style1.css">
 </head>
 
 <body>
   <div class="container-fluid p-0 m-0">
     <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-black">
-      <img src="../logo/logo_mulmed.png" alt="icon-owl" width="80">
+      <img src="logo/logo_mulmed.png" alt="icon-owl" width="80">
       <ul class="nav nav-pills nav-fill lead">
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="materi/materi.php">Materi</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="pages/materi/materi.php">Materi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="game/game.php">Game</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="pages/game/game2/game2.php">Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="Quiz/quiz.php">Quiz</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="pages/Quiz/quiz.php">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="profile/profile.php">Profile</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="pages/profile/profile.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary text-decoration-underline" href="about.php">About</a>
+          <a class="nav-link fw-bold text-white link-secondary" href="pages/about.php">About</a>
         </li>
       </ul>
     </header>
