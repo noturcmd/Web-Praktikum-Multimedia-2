@@ -3,46 +3,32 @@
 session_start();
 
 include "../../connection/db_connection.php";
+$current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
+
 $query = "SELECT * FROM soal";
 $stm = $koneksi->prepare($query);
 $stm->execute();
-$user = $stm->fetch();
-var_dump($user["opsi"]);
-
-$opsi = explode(";", $user["opsi"]);
-var_dump($opsi);
+$user = $stm->fetchAll();
 
 
-$questions = array(
-  array(
-    'question' => 'Apa nama hewan yang memiliki punuk dan tinggal di gurun pasir?',
-    'options' => array('Unta', 'Buaya', 'Harimau', 'Kucing'),
-    'correct' => 'Unta'
-  ),
-  array(
-    'question' => 'What is the largest planet in our Solar System?',
-    'options' => array('Earth', 'Mars', 'Jupiter', 'Saturn'),
-    'correct' => 'Jupiter'
-  )
-);
+$questions = array();
 
-$question = [];
-
-for ($i=0; $i < 1; $i++) { 
-  $question['question'] = "Siapa nama ku?";
+for ($i=0; $i < count($user); $i++) { 
+  $opsi = explode(";", $user[$i]["opsi"]);
+  $question = [];
+  $question['question'] = $user[$i]['soal'];
   $opsi2 = [];
   foreach ($opsi as $value) {
     $opsi2[] = $value;
   }
   $question['options'] = $opsi2;
+  $question['correct'] = $user[$i]['jawaban'];
+  $questions[] = $question;
 }
 
-$questions[] = $question;
 
-var_dump($questions);
-exit();
 
-$current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['answer'])) {
@@ -52,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if ($current_question >= count($questions)) {
     $correct_answers = 0;
     foreach ($questions as $index => $question) {
-      if (isset($_SESSION['answers'][$index]) && $_SESSION['answers'][$index] === $question['correct']) {
+
+      if (isset($_SESSION['answers'][$index]) && strtolower($_SESSION['answers'][$index]) === strtolower($question['correct'])) {
         $correct_answers++;
       }
     }
