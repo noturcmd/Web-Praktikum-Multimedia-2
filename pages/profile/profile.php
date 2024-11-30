@@ -5,7 +5,6 @@ $query = "SELECT *, DATE_FORMAT(created_at,'%d/%m/%Y') AS tanggal  FROM users wh
 $stm = $koneksi->prepare($query);
 $stm->execute();
 $user = $stm->fetch();
-// var_dump($user);
 ?>
 
 <!doctype html>

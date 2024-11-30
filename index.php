@@ -1,12 +1,9 @@
 <?php
 include "connection/db_connection.php";
-
-
-
 ?>
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
