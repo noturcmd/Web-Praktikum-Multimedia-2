@@ -16,29 +16,45 @@
 <body>
   <div class="container-fluid p-0 m-0">
     <!-- Header yang diselaraskan dengan index.php -->
-    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-black">
-      <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="80">
-      <ul class="nav nav-pills nav-fill lead">
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" aria-current="page" href="../../index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../../pages/materi/materi.php">Materi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="game.php">Game</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../about.php">About</a>
-        </li>
-      </ul>
+    <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a href="../../index.php" class="navbar-brand d-flex align-items-center">
+          <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
+          <span class="text-white fw-bold">Beastie Brain Tease</span>
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../../index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../../pages/materi/materi.php">Materi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="game.php">Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../about.php">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
+
 
     <section class="parallax-bg">
       <div class="parallax-overlay"></div>

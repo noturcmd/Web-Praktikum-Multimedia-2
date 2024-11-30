@@ -16,29 +16,45 @@
 <body>
   <div class="container-fluid p-0 m-0">
     <!-- Header yang diselaraskan dengan index.php -->
-    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-black">
-      <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="80">
-      <ul class="nav nav-pills nav-fill lead">
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" aria-current="page" href="../../index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="../materi/materi.php">Materi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../game/game.php">Game</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="../about.php">About</a>
-        </li>
-      </ul>
+    <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a href="../../index.php" class="navbar-brand d-flex align-items-center">
+          <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
+          <span class="text-white fw-bold">Beastie Brain Tease</span>
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../../index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="../materi/materi.php">Materi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../game/game.php">Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../about.php">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
+
 
     <!-- Konten lainnya tetap sama -->
     <section class="parallax-bg m-0 p-0">
@@ -68,59 +84,3 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Materi PHP Dasar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    p {
-      font-size: 16px;
-      color: #555;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <?php
-    // Mendefinisikan variabel untuk judul dan isi materi
-    $judul = "Materi PHP Dasar";
-    $isi = "PHP adalah bahasa pemrograman server-side yang digunakan untuk membuat halaman web dinamis. PHP dapat berintegrasi dengan berbagai jenis database, seperti MySQL.";
-
-    // Menampilkan judul dan isi materi
-    echo "<h1>$judul</h1>";
-    echo "<p>$isi</p>";
-    ?>
-  </div>
-
-</body>
-
-</html>
-
-
-</html>

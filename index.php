@@ -17,36 +17,52 @@ include "connection/db_connection.php";
   <link rel="stylesheet" href="styles/parallax.css">
   <link rel="stylesheet" href="styles/style1.css">
   <style>
-    
+
   </style>
 </head>
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-black">
-      <img src="logo/logo_mulmed.png" alt="icon-owl" width="80">
-      <ul class="nav nav-pills nav-fill lead">
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/materi/materi.php">Materi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/game/game2/game2.php">Game</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/Quiz/quiz.php">Quiz</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/profile/profile.php">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/about.php">About</a>
-        </li>
-      </ul>
-    
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+      <div class="container-fluid">
+        <!-- Logo dan Judul -->
+        <a class="navbar-brand d-flex align-items-center" href="index.php">
+          <img src="logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
+          <span class="text-white fw-bold">Beastie Brain Tease</span>
+        </a>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Navbar -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white text-decoration-underline" aria-current="page" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="pages/materi/materi.php">Materi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="pages/game/game2/game2.php">Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="pages/profile/profile.php">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="pages/about.php">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
+
 
     <section class="parallax-bg m-0 p-0">
       <div class="parallax-overlay"></div>
@@ -89,7 +105,7 @@ include "connection/db_connection.php";
                   </div>
                   <!-- Bagian kanan (informasi singkat) -->
                   <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 2: 
+                    <p class="text-justify text-white">Materi 2:
                       Untuk menempatkan carousel-item di luar section materi, kita bisa membuat struktur HTML di mana section dan carousel menjadi dua elemen terpisah, tetapi tetap menjaga tampilan dan fungsionalitas. Berikut adalah versi yang diperbarui dari kode yang memindahkan carousel-item di luar section materi tetapi masih mencakup semua konten yang relevan.</p>
                     <a href="pages/materi/materi.php?id=2" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
                   </div>
@@ -146,9 +162,9 @@ include "connection/db_connection.php";
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
 
-<?php $koneksi = null?>
-
+<?php $koneksi = null ?>

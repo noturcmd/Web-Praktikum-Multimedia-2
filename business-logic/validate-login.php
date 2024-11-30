@@ -13,6 +13,8 @@ if (isset($_POST["login"])) {
     $checkUser = $stm->fetch(PDO::FETCH_ASSOC);
     if ($checkUser) {
         if (password_verify($password, $checkUser["password"])) {
+
+            setcookie("login", "success", time() + (86400 * 7), "/");
             echo <<<ALERT
                 <script>
                     alert('Login Berhasil!');

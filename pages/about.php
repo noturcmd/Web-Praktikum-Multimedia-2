@@ -15,124 +15,104 @@
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <header class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center bg-black">
-      <img src="logo/logo_mulmed.png" alt="icon-owl" width="80">
-      <ul class="nav nav-pills nav-fill lead">
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/materi/materi.php">Materi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/game/game2/game2.php">Game</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/Quiz/quiz.php">Quiz</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/profile/profile.php">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white link-secondary" href="pages/about.php">About</a>
-        </li>
-      </ul>
+    <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a href="../../index.php" class="navbar-brand d-flex align-items-center">
+          <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
+          <span class="text-white fw-bold">Beastie Brain Tease</span>
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="../index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="materi/materi.php">Materi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="game/game.php">Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="quiz/quiz.php">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary" href="profile/profile.php">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white link-secondary text-decoration-underline" href="about.php">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
-    <section class="parallax-bg m-0 p-0">
-      <div class="parallax-overlay"></div>
-      <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="display-3 fw-bold mb-4">Welcome to Our Website</h1>
-        <p class="display-6">Your Gateway to Unlimited Knowledge</p>
-        <a href="#materi" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 h3">Explore Now</a>
+    <section class="container my-5">
+      <div class="text-center">
+        <h1 class="fw-bold mb-4">About Beastie Brain Tease</h1>
+        <p class="lead">
+          Beastie Brain Tease adalah platform pembelajaran interaktif yang dirancang untuk membantu pengguna memperluas pengetahuan mereka melalui materi edukatif, game interaktif, dan quiz yang menantang.
+          Kami percaya bahwa belajar bisa menjadi lebih menyenangkan dengan pengalaman yang interaktif dan menghibur.
+        </p>
+      </div>
+      <hr class="my-5">
+
+      <!-- Author Information -->
+      <div class="text-center">
+        <h2 class="fw-bold mb-4">Author Information</h2>
+        <div class="row justify-content-center">
+          <!-- Author 1 -->
+          <div class="col-lg-8 d-flex align-items-center mb-4">
+            <div class="flex-grow-1 text-start">
+              <ul class="list-unstyled">
+                <li><strong>Nama:</strong> John Doe</li>
+                <li><strong>NIM:</strong> 123456789</li>
+                <li><strong>Jurusan:</strong> Teknik Informatika</li>
+                <li><strong>Fakultas:</strong> Fakultas Teknik</li>
+                <li><strong>Universitas:</strong> Universitas XYZ</li>
+              </ul>
+            </div>
+            <img src="../img-users/no-photo.jpg" alt="Author Photo 1" class="rounded-circle ms-4" style="width: 120px; height: 120px; object-fit: cover;">
+          </div>
+
+          <!-- Author 2 -->
+          <div class="col-lg-8 d-flex align-items-center mb-4">
+            <div class="flex-grow-1 text-start">
+              <ul class="list-unstyled">
+                <li><strong>Nama:</strong> Jane Smith</li>
+                <li><strong>NIM:</strong> 987654321</li>
+                <li><strong>Jurusan:</strong> Sistem Informasi</li>
+                <li><strong>Fakultas:</strong> Fakultas Teknologi Informasi</li>
+                <li><strong>Universitas:</strong> Universitas ABC</li>
+              </ul>
+            </div>
+            <img src="../img-users/no-photo.jpg" alt="Author Photo 2" class="rounded-circle ms-4" style="width: 120px; height: 120px; object-fit: cover;">
+          </div>
+
+          <!-- Author 3 -->
+          <div class="col-lg-8 d-flex align-items-center mb-4">
+            <div class="flex-grow-1 text-start">
+              <ul class="list-unstyled">
+                <li><strong>Nama:</strong> Michael Johnson</li>
+                <li><strong>NIM:</strong> 1122334455</li>
+                <li><strong>Jurusan:</strong> Teknik Komputer</li>
+                <li><strong>Fakultas:</strong> Fakultas Teknik</li>
+                <li><strong>Universitas:</strong> Universitas DEF</li>
+              </ul>
+            </div>
+            <img src="../img-users/no-photo.jpg" alt="Author Photo 3" class="rounded-circle ms-4" style="width: 120px; height: 120px; object-fit: cover;">
+          </div>
+        </div>
       </div>
     </section>
 
-    <main id="section-materi">
-      <section id="materi" class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4 text-white">Materi</h2>
-
-          <div id="materiCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <!-- Item 1 -->
-              <div class="carousel-item active">
-                <div class="row align-items-center materi-background">
-                  <!-- Bagian kiri (gambar) -->
-                  <div class="col-md-6">
-                    <img src="path/to/your-image1.jpg" alt="Materi 1" class="img-fluid">
-                  </div>
-                  <!-- Bagian kanan (informasi singkat) -->
-                  <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 1: Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
-                    <a href="pages/materi/materi.php?id=1" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="carousel-item">
-                <div class="row align-items-center materi-background">
-                  <!-- Bagian kiri (gambar) -->
-                  <div class="col-md-6">
-                    <img src="path/to/your-image2.jpg" alt="Materi 2" class="img-fluid">
-                  </div>
-                  <!-- Bagian kanan (informasi singkat) -->
-                  <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 2: 
-                      Untuk menempatkan carousel-item di luar section materi, kita bisa membuat struktur HTML di mana section dan carousel menjadi dua elemen terpisah, tetapi tetap menjaga tampilan dan fungsionalitas. Berikut adalah versi yang diperbarui dari kode yang memindahkan carousel-item di luar section materi tetapi masih mencakup semua konten yang relevan.</p>
-                    <a href="pages/materi/materi.php?id=2" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="carousel-item">
-                <div class="row align-items-center materi-background">
-                  <!-- Bagian kiri (gambar) -->
-                  <div class="col-md-6">
-                    <img src="path/to/your-image3.jpg" alt="Materi 3" class="img-fluid">
-                  </div>
-                  <!-- Bagian kanan (informasi singkat) -->
-                  <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 3: Asah pemahamanmu dengan materi yang lebih menantang.</p>
-                    <a href="pages/materi/materi.php?id=3" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Navigasi Kiri-Kanan -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#materiCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden text-white">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#materiCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden text-white">Next</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section Game -->
-      <section id="game">
-        <div class="container py-5">
-          <h2 class="text-center mb-4 text-white">Game</h2>
-          <p class="text-center text-white">Asah kemampuanmu dengan berbagai game edukatif yang seru!</p>
-          <a href="pages/game/game.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mainkan Game</a>
-        </div>
-      </section>
-
-      <!-- Section Quiz -->
-      <section id="quiz">
-        <div class="container py-5">
-          <h2 class="text-center mb-4 text-white">Quiz</h2>
-          <p class="text-center text-white">Uji pengetahuanmu dengan berbagai quiz yang menantang.</p>
-          <a href="pages/quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mulai Quiz</a>
-        </div>
-      </section>
-    </main>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
