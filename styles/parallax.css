@@ -66,3 +66,19 @@ header{
     width: 100% !important;
     z-index: 1000 !important; /* pastikan header berada di depan elemen lain */
 }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+iframe {
+    width: 80%;
+    height: 60vh;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+}
