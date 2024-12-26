@@ -7,19 +7,21 @@
   <title>Materi</title>
   <link rel="shortcut icon" href="../../logo/logo_mulmed.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../styles/style1.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../../styles/parallax.css">
+  <link rel="stylesheet" href="../../styles/StylePages.css">
+  <style>
+
+  </style>
 </head>
 
 <body>
   <div class="container-fluid p-0 m-0">
-    <!-- Header yang diselaraskan dengan index.php -->
     <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
       <div class="container-fluid">
-        <!-- Logo -->
-        <a href="../../index.php" class="navbar-brand d-flex align-items-center">
+        <!-- Logo dan Judul -->
+        <a class="navbar-brand d-flex align-items-center" href="../../index.php">
           <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
           <span class="text-white fw-bold">Beastie Brain Tease</span>
         </a>
@@ -33,28 +35,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white link-secondary" href="../../index.php">Home</a>
+              <a class="nav-link fw-bold text-white" href="../../index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="../materi/materi.php">Materi</a>
+              <a class="nav-link fw-bold text-white text-decoration-underline" href="../materi/materi.php">Materi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white link-secondary" href="../game.php">Game</a>
+              <a class="nav-link fw-bold text-white" href="../game.php">Game</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a>
+              <a class="nav-link fw-bold text-white" href="../quiz/quiz.php">Quiz</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a>
+              <a class="nav-link fw-bold text-white" href="../profile/profile.php">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white link-secondary" href="../about.php">About</a>
+              <a class="nav-link fw-bold text-white" href="../about.php">About</a>
             </li>
           </ul>
         </div>
       </div>
     </header>
-
 
     <!-- Konten lainnya tetap sama -->
     <section class="parallax-bg m-0 p-0">

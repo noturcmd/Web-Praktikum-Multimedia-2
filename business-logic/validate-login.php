@@ -14,7 +14,7 @@ if (isset($_POST["login"])) {
     if ($checkUser) {
         if (password_verify($password, $checkUser["password"])) {
             setcookie("login", "success", time() + (86400 * 7), "/");
-            setcookie("logusmulmed", "osasuvu%/45342290pp" + $checkUser["id"], time() + (86400 * 7), "/");
+            setcookie("logusmulmed", "osasuvu%/45342290pp" . $checkUser["id"], time() + (86400 * 7), "/");
             echo <<<ALERT
                 <script>
                     alert('Login Berhasil!');

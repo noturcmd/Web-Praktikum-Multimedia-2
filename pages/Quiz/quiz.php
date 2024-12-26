@@ -8,7 +8,7 @@ $current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
 $query = "SELECT * FROM soal";
 $stm = $koneksi->prepare($query);
 $stm->execute();
-$user = $stm->fetchAll();
+$user = $stm->fetchAll(PDO::FETCH_ASSOC);
 
 
 $questions = array();
@@ -70,91 +70,7 @@ if ($current_question === 0) {
   <link rel="stylesheet" href="../../styles/quiz.css">
 
   <style>
-    .quiz-container {
-      border-radius: 30px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      padding: 40px;
-      max-width: 900px;
-      margin: 40px auto;
-      position: relative;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.9) !important;
-    }
-
-    .quiz-intro {
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 20px;
-      background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
-      border-radius: 15px;
-    }
-
-    .quiz-intro h2 {
-      color: #FF6B6B;
-      font-weight: 700;
-      font-size: 2.2em;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .quiz-intro p {
-      color: #2C3E50;
-      font-size: 1.1em;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .progress {
-      height: 12px;
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-    }
-
-    .progress-bar {
-      background: goldenrod;
-      transition: width 0.5s ease;
-    }
-
-    .option-card {
-      background: rgba(255, 255, 255, 0.8) !important;
-      border: 2px solid rgba(78, 205, 196, 0.3) !important;
-      border-radius: 20px;
-      padding: 20px;
-      margin: 15px 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .option-card:hover {
-      transform: translateY(-5px);
-      background: rgba(78, 205, 196, 0.2) !important;
-      border-color: #4ECDC4 !important;
-    }
-
-    .option-card.selected {
-      background: linear-gradient(45deg, rgba(78, 205, 196, 0.9), rgba(46, 204, 113, 0.9)) !important;
-      color: white;
-      border-color: transparent;
-    }
-
-    .btn-custom {
-      background: #000A1F;
-      color: white;
-      padding: 15px 40px;
-      border-radius: 50px;
-      border: none;
-      font-size: 1.2em;
-      transition: all 0.3s ease;
-    }
-
-    .btn-custom:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      color: white;
-    }
+   
   </style>
 </head>
 
@@ -184,7 +100,7 @@ if ($current_question === 0) {
               <a class="nav-link fw-bold text-white link-secondary" href="../materi/materi.php">Materi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white link-secondary" href="../game/game.php">Game</a>
+              <a class="nav-link fw-bold text-white link-secondary" href="../game.php">Game</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white link-secondary text-decoration-underline" href="quiz.php">Quiz</a>
@@ -274,7 +190,6 @@ if ($current_question === 0) {
             <?php else: ?>
               <div></div>
             <?php endif; ?>
-
             <button type="submit" class="btn btn-custom">
               <?php echo ($current_question < count($questions) - 1) ? 'Selanjutnya →' : 'Selesai ✓'; ?>
             </button>

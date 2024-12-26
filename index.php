@@ -15,9 +15,64 @@ include "connection/db_connection.php";
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="styles/parallax.css">
-  <link rel="stylesheet" href="styles/style1.css">
+  <link rel="stylesheet" href="styles/StylePages.css">
   <style>
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: #ffc107 !important;
+      transform: translateY(-2px);
+    }
 
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffc107;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .profile-dropdown {
+      position: relative;
+    }
+
+    .profile-dropdown .dropdown-menu {
+      background: rgba(0,0,0,0.9);
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .profile-dropdown .dropdown-item {
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .profile-dropdown .dropdown-item:hover {
+      background: #ffc107;
+      color: black;
+      transform: translateX(5px);
+    }
+
+    .profile-img {
+      border: 2px solid #ffc107;
+      transition: all 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255,193,7,0.5);
+    }
   </style>
 </head>
 
@@ -39,7 +94,7 @@ include "connection/db_connection.php";
 
         <!-- Menu Navbar -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
               <a class="nav-link fw-bold text-white text-decoration-underline" aria-current="page" href="index.php">Home</a>
             </li>
@@ -52,32 +107,29 @@ include "connection/db_connection.php";
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
             </li>
-            <?php if (isset($_COOKIE['logusmulmed'])): ?>
-              <li class="nav-item">
-                <a class="nav-link fw-bold text-white" href="pages/profile/profile.php">Profile</a>
-              </li>
-            <?php endif ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="pages/about.php">About</a>
             </li>
-
-            <?php if(isset($_COOKIE['logusmulmed'])): ?>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/profile/profile.php">
-                  <img src="path_to_user_profile_image.jpg" alt="User Profile" class="rounded-circle" width="40" height="40">
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item dropdown profile-dropdown ms-3">
+                <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
                 </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="pages/profile/profile.php">My Profile</a></li>
+                  <li><hr class="dropdown-divider bg-light"></li>
+                  <li><a class="dropdown-item" href="login.php">Logout</a></li>
+                </ul>
               </li>
             <?php else: ?>
-              <li class="nav-item">
-                <a class="btn btn-outline-light fw-bold ms-2" href="login.php">Login</a>
+              <li class="nav-item ms-3">
+                <a class="btn btn-outline-warning fw-bold" href="login.php">Login</a>
               </li>
             <?php endif; ?>
           </ul>
         </div>
       </div>
     </header>
-
-
 
     <section class="parallax-bg m-0 p-0">
       <div class="parallax-overlay"></div>

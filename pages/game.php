@@ -6,33 +6,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Game</title>
   <link rel="shortcut icon" href="../logo/logo_mulmed.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/style1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../styles/parallax.css">
-
+  <link rel="stylesheet" href="../styles/StylePages.css">
   <style>
-    /* Latar belakang hitam untuk bagian game */
-    #game-section {
-      background-color: black;
-      color: white;
-      padding: 50px 0;
-      min-height: 100vh;
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
     }
 
-    iframe {
-      display: block;
-      margin: 0 auto;
-      width: 80%;
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: #ffc107 !important; 
+      transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffc107;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    #game-section {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #game-iframe {
+      width: 90%;
       height: 80vh;
-      border: none;
+      border: 3px solid #ffc107;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+      margin-bottom: 1rem;
     }
 
     .fullscreen-btn {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    #fullscreen-btn {
+      background: linear-gradient(45deg, #ffd700, #ff8c00);
+      border: none;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #fullscreen-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+      background: linear-gradient(45deg, #ff8c00, #ffd700);
+    }
+
+    #play-btn {
+      background: linear-gradient(45deg, #ffd700, #ff8c00);
+      border: none;
+      text-decoration: none;
+      border-radius: 25px;
+      padding: 15px 40px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #000;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    #play-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+      background: linear-gradient(45deg, #ff8c00, #ffd700);
+    }
+
+    .parallax-content h1 {
+      font-size: 4rem;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+      margin-bottom: 1.5rem;
+    }
+
+    .parallax-content p {
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      #game-iframe {
+        height: 60vh;
+      }
+      
+      .parallax-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .parallax-content p {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -55,13 +150,13 @@
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link fw-bold text-white link-secondary" href="../../index.php">Home</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white link-secondary" href="../../pages/materi/materi.php">Materi</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white text-decoration-underline link-secondary" href="game.php">Game</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white link-secondary" href="../quiz/quiz.php">Quiz</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white link-secondary" href="../profile/profile.php">Profile</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white link-secondary" href="../about.php">About</a></li>
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a class="nav-link fw-bold text-white" href="../index.php">Home</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-white" href="materi/materi.php">Materi</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-white text-decoration-underline" href="game.php">Game</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-white" href="Quiz/quiz.php">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-white" href="profile/profile.php">Profile</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-white" href="about.php">About</a></li>
           </ul>
         </div>
       </div>
@@ -71,9 +166,9 @@
     <section class="parallax-bg">
       <div class="parallax-overlay"></div>
       <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="h1 text-warning font-bold mb-4">Play the Game</h1>
-        <p class="h2">Increase Your Knowledge</p>
-        <a href="#game-section" id="play-btn" class="h2 mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Play Now</a>
+        <h1 class="text-warning font-bold">Play the Game</h1>
+        <p>Increase Your Knowledge</p>
+        <a href="#game-section" id="play-btn" class="mt-8">Play Now</a>
       </div>
     </section>
 
@@ -81,7 +176,7 @@
     <section id="game-section">
       <iframe id="game-iframe" src="../game/index.html"></iframe>
       <div class="fullscreen-btn">
-        <button id="fullscreen-btn" class="btn btn-warning">Fullscreen</button>
+        <button id="fullscreen-btn" class="btn">Fullscreen</button>
       </div>
     </section>
   </div>
