@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Game</title>
-  <link rel="shortcut icon" href="../../logo/logo_mulmed.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../logo/logo_mulmed.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../styles/style1.css">
+  <link rel="stylesheet" href="../styles/style1.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="../../styles/parallax.css">
+  <link rel="stylesheet" href="../styles/parallax.css">
+
   <style>
     /* Latar belakang hitam untuk bagian game */
     #game-section {
@@ -36,8 +37,8 @@
     <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
       <div class="container-fluid">
         <!-- Logo -->
-        <a href="../../index.php" class="navbar-brand d-flex align-items-center">
-          <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
+        <a href="../index.php" class="navbar-brand d-flex align-items-center">
+          <img src="../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
           <span class="text-white fw-bold">Beastie Brain Tease</span>
         </a>
 

@@ -52,16 +52,31 @@ include "connection/db_connection.php";
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-white" href="pages/profile/profile.php">Profile</a>
-            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white" href="pages/profile/profile.php">Profile</a>
+              </li>
+            <?php endif ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="pages/about.php">About</a>
             </li>
+
+            <?php if(isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/profile/profile.php">
+                  <img src="path_to_user_profile_image.jpg" alt="User Profile" class="rounded-circle" width="40" height="40">
+                </a>
+              </li>
+            <?php else: ?>
+              <li class="nav-item">
+                <a class="btn btn-outline-light fw-bold ms-2" href="login.php">Login</a>
+              </li>
+            <?php endif; ?>
           </ul>
         </div>
       </div>
     </header>
+
 
 
     <section class="parallax-bg m-0 p-0">
