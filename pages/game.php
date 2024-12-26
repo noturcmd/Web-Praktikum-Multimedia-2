@@ -65,9 +65,9 @@
     <section class="parallax-bg">
       <div class="parallax-overlay"></div>
       <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="text-5xl font-bold mb-4">Play the Game</h1>
-        <p class="text-xl">Increase Your Knowledge</p>
-        <a href="#game-section" id="play-btn" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Play Now</a>
+        <h1 class="h1 text-warning font-bold mb-4">Play the Game</h1>
+        <p class="h2">Increase Your Knowledge</p>
+        <a href="#game-section" id="play-btn" class="h2 mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Play Now</a>
       </div>
     </section>
 
