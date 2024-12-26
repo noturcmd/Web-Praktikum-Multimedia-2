@@ -28,6 +28,12 @@
       height: 80vh;
       border: none;
     }
+
+    .fullscreen-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -73,7 +79,10 @@
 
     <!-- Section Game -->
     <section id="game-section">
-      <iframe src="../game/index.html"></iframe>
+      <iframe id="game-iframe" src="../game/index.html"></iframe>
+      <div class="fullscreen-btn">
+        <button id="fullscreen-btn" class="btn btn-warning">Fullscreen</button>
+      </div>
     </section>
   </div>
 
@@ -81,9 +90,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Scroll ke bagian game
-    document.getElementById('play-btn').addEventListener('click', function (event) {
+    document.getElementById('play-btn').addEventListener('click', function(event) {
       event.preventDefault();
-      document.querySelector('#game-section').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#game-section').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+
+    // Fullscreen untuk iframe
+    document.getElementById('fullscreen-btn').addEventListener('click', function() {
+      const iframe = document.getElementById('game-iframe');
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.mozRequestFullScreen) { // Firefox
+        iframe.mozRequestFullScreen();
+      } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) { // IE/Edge
+        iframe.msRequestFullscreen();
+      }
     });
   </script>
 </body>
