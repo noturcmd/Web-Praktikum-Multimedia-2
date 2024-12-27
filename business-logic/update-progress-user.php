@@ -1,27 +1,26 @@
 <?php
 
 
-function updateProgressUser($level, $totalLevel, $userId, $con){
-    $progressLevel = ($level / $totalLevel) * 100;
-    $query = "UPDATE users SET level_kuis='$level', progress_kuis='{$progressLevel}%'  WHERE id='$userId'";
+function updateLevelUser($level, $userId, $con){
+    $query = "UPDATE users SET level_kuis='$level' WHERE id='$userId'";
     $con = getConnection();
     $con->exec($query);
     $con = null;
 }
 
 
-function updateSkor($skor, $userId, $con){
+function updateSkorUser($skor, $userId, $con){
     $query = "UPDATE users SET skor='$skor' WHERE id='$userId'";
     $con = getConnection();
     $con->exec($query);
     $con = null;
 }
 
-function getLevelUser($userId, $con){
-    $query = "SELECT level_kuis FROM users WHERE id='$userId'";
+function updateProgressUser($level, $jumlahSoal, $userId, $con){
+    $progressLevel = ($level / $jumlahSoal) * 100;
+    $query = "UPDATE users SET progress_kuis='{$progressLevel}%'  WHERE id='$userId'";
     $con = getConnection();
-    $result = $con->query($query);
+    $con->exec($query);
     $con = null;
-    return $result->fetchAll();
 }
 ?>

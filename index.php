@@ -106,7 +106,7 @@ include "connection/db_connection.php";
             </li>
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
               <li class="nav-item">
-                <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
+                <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php?q=0">Quiz</a>
               </li>
             <?php endif; ?>
             <li class="nav-item">

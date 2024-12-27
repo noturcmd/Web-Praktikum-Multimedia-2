@@ -4,24 +4,16 @@ session_start();
 
 include "../../connection/db_connection.php";
 include "../../business-logic/update-progress-user.php";
+include "../../business-logic/users.php";
 
 $koneksi = getConnection();
 
-$current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
+$current_question = isset($_GET['q']) ? $_GET['q'] : 0;
+
 $query = "SELECT * FROM soal";
 $stm = $koneksi->prepare($query);
 $stm->execute();
 $user = $stm->fetchAll(PDO::FETCH_ASSOC);
-
-updateProgressUser($current_question, count($user), $_COOKIE['logusid'], $koneksi);
-$levelUser = getLevelUser($_COOKIE['logusid'], $koneksi)[0]['level_kuis'];
-if($levelUser == 0){
-  $current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
-}else{
-  $current_question = $levelUser;
-}
-
-
 
 
 $questions = array();
@@ -37,36 +29,6 @@ for ($i = 0; $i < count($user); $i++) {
   $question['options'] = $opsi2;
   $question['correct'] = $user[$i]['jawaban'];
   $questions[] = $question;
-}
-
-
-
-
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if (isset($_POST['answer'])) {
-    $_SESSION['answers'][$current_question - 1] = $_POST['answer'];
-    
-  }
-
-  if ($current_question >= count($questions)) {
-    $correct_answers = 0;
-    for ($i=0; $i < count($questions); $i++) {
-      $jawabanUser = explode(")", $_SESSION['answers'][$i]);
-      $jawabanUser = $jawabanUser[0];
-      if($jawabanUser == $questions[$i]['correct']){
-        $correct_answers += 1;
-      }
-    }
-    $skorAkhir = ($correct_answers / count($questions)) * 100;
-    updateSkor($skorAkhir, $_COOKIE['logusid'], $koneksi);
-    $_SESSION['final_score'] = $skorAkhir;
-  }
-}
-
-if ($current_question === 0) {
-  $_SESSION['answers'] = array();
-  unset($_SESSION['final_score']);
 }
 ?>
 
@@ -213,7 +175,7 @@ if ($current_question === 0) {
             <?php else: ?>
               <div></div>
             <?php endif; ?>
-            <button type="submit" class="btn btn-custom">
+            <button type="submit" class="btn btn-custom" name="submit">
               <?php echo ($current_question < count($questions) - 1) ? 'Selanjutnya →' : 'Selesai ✓'; ?>
             </button>
           </div>
