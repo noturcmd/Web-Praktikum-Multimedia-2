@@ -1,7 +1,5 @@
 <?php
 
-
-
 function getConnection()
 {
     $host = "localhost";
