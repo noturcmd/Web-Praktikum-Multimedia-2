@@ -77,7 +77,7 @@
     <div class="quiz-container animate__animated animate__fadeIn">
       <h1 class="text-center text-warning mb-5">Knowledge Quiz</h1>
       
-      <form action="process-quiz.php" method="POST">
+      <form action="../../business-logic/process-quiz.php" method="POST">
         <?php
         // Database connection
         require_once '../../connection/db_connection.php';
@@ -115,7 +115,7 @@
                     <input type="radio" 
                            name="q<?php echo $question['id_soal']; ?>" 
                            id="<?php echo $optionId; ?>" 
-                           value="<?php echo $key; ?>" 
+                           value="<?php echo $option; ?>" 
                            class="d-none">
                     <label for="<?php echo $optionId; ?>" class="option-label">
                       <?php echo htmlspecialchars($option); ?>
