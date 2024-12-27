@@ -70,7 +70,7 @@ if ($current_question === 0) {
   <link rel="stylesheet" href="../../styles/quiz.css">
 
   <style>
-   
+
   </style>
 </head>
 
@@ -114,14 +114,16 @@ if ($current_question === 0) {
                   <img src="img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="../profile/profile.php">My Profile</a></li>
-                  <li><hr class="dropdown-divider bg-light"></li>
+                  <li><a class="dropdown-item" href="pages/profile/profile.php">My Profile</a></li>
+                  <li>
+                    <hr class="dropdown-divider bg-light">
+                  </li>
                   <li><a class="dropdown-item" href="login.php">Logout</a></li>
                 </ul>
               </li>
             <?php else: ?>
               <li class="nav-item ms-3">
-                <a class="btn btn-outline-warning fw-bold" href="../../login.php">Login</a>
+                <a class="btn btn-outline-warning fw-bold" href="login.php">Login</a>
               </li>
             <?php endif; ?>
           </ul>
