@@ -1,3 +1,12 @@
+<?php
+
+
+include "connection/db_connection.php";
+include "business-logic/validate-signup.php.php";
+
+validateSignUp(getConnection());
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
