@@ -169,7 +169,7 @@
               </li>
             <?php else: ?>
               <li class="nav-item ms-3">
-                <a class="btn btn-outline-warning fw-bold" href="login.php">Login</a>
+                <a class="btn btn-outline-warning fw-bold" href="../login.php">Login</a>
               </li>
             <?php endif; ?>
           </ul>
