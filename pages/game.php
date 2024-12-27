@@ -154,7 +154,9 @@
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="../index.php">Home</a></li>
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="materi/materi.php">Materi</a></li>
             <li class="nav-item"><a class="nav-link fw-bold text-white text-decoration-underline" href="game.php">Game</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white" href="Quiz/quiz.php">Quiz</a></li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="Quiz/quiz.php">Quiz</a></li>
+            <?php endif; ?>
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="about.php">About</a></li>
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
               <li class="nav-item dropdown profile-dropdown ms-3">

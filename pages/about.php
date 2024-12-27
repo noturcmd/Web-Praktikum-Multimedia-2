@@ -22,7 +22,7 @@
       position: relative;
       transition: all 0.3s ease;
     }
-    
+
     .nav-link:hover {
       color: #ffc107 !important;
       transform: translateY(-2px);
@@ -98,7 +98,8 @@
       transform: scale(1.1) rotate(5deg);
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       background: linear-gradient(45deg, #ffd700, #ff8c00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -139,7 +140,7 @@
     }
 
     .profile-dropdown .dropdown-menu {
-      background: rgba(0,0,0,0.9);
+      background: rgba(0, 0, 0, 0.9);
       border: 1px solid #ffc107;
       border-radius: 8px;
       margin-top: 10px;
@@ -160,12 +161,12 @@
       .container {
         padding-top: 70px;
       }
-      
+
       .author-card {
         flex-direction: column;
         text-align: center;
       }
-      
+
       .rounded-circle {
         margin: 20px auto;
       }
@@ -197,9 +198,11 @@
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="game.php">Game</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-white" href="quiz/quiz.php">Quiz</a>
-            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white" href="quiz/quiz.php">Quiz</a>
+              </li>
+            <?php endif; ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white text-decoration-underline" href="about.php">About</a>
             </li>
@@ -210,7 +213,9 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="profile/profile.php">My Profile</a></li>
-                  <li><hr class="dropdown-divider bg-light"></li>
+                  <li>
+                    <hr class="dropdown-divider bg-light">
+                  </li>
                   <li><a class="dropdown-item" href="login.php">Logout</a></li>
                 </ul>
               </li>
@@ -289,4 +294,5 @@
     });
   </script>
 </body>
+
 </html>

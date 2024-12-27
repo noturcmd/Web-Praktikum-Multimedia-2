@@ -43,9 +43,11 @@
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="../game.php">Game</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-white" href="../quiz/quiz.php">Quiz</a>
-            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white" href="../Quiz/quiz.php">Quiz</a>
+              </li>
+            <?php endif; ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="../about.php">About</a>
             </li>

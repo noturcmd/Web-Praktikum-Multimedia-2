@@ -21,7 +21,7 @@ include "connection/db_connection.php";
       position: relative;
       transition: all 0.3s ease;
     }
-    
+
     .nav-link:hover {
       color: #ffc107 !important;
       transform: translateY(-2px);
@@ -47,7 +47,7 @@ include "connection/db_connection.php";
     }
 
     .profile-dropdown .dropdown-menu {
-      background: rgba(0,0,0,0.9);
+      background: rgba(0, 0, 0, 0.9);
       border: 1px solid #ffc107;
       border-radius: 8px;
       margin-top: 10px;
@@ -71,7 +71,7 @@ include "connection/db_connection.php";
 
     .profile-img:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 15px rgba(255,193,7,0.5);
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
     }
   </style>
 </head>
@@ -104,9 +104,11 @@ include "connection/db_connection.php";
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="pages/game.php">Game</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
-            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white" href="pages/Quiz/quiz.php">Quiz</a>
+              </li>
+            <?php endif; ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="pages/about.php">About</a>
             </li>
@@ -117,7 +119,9 @@ include "connection/db_connection.php";
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="pages/profile/profile.php">My Profile</a></li>
-                  <li><hr class="dropdown-divider bg-light"></li>
+                  <li>
+                    <hr class="dropdown-divider bg-light">
+                  </li>
                   <li><a class="dropdown-item" href="login.php">Logout</a></li>
                 </ul>
               </li>

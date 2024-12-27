@@ -37,10 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if ($current_question >= count($questions)) {
     $correct_answers = 0;
-    foreach ($questions as $index => $question) {
-
-      if (isset($_SESSION['answers'][$index]) && strtolower($_SESSION['answers'][$index]) === strtolower($question['correct'])) {
-        $correct_answers++;
+    for ($i=0; $i < count($questions); $i++) {
+      $jawabanUser = explode(")", $_SESSION['answers'][$i]);
+      $jawabanUser = $jawabanUser[0];
+      if($jawabanUser == $questions[$i]['correct']){
+        $correct_answers += 1;
       }
     }
     $_SESSION['final_score'] = ($correct_answers / count($questions)) * 100;
@@ -131,16 +132,7 @@ if ($current_question === 0) {
       </div>
     </header>
 
-    <section class="parallax-bg">
-      <div class="parallax-overlay"></div>
-      <div class="parallax-content animate__animated animate__fadeInDown">
-        <h1 class="text-5xl font-bold mb-4">Play the Game</h1>
-        <p class="text-xl">Increase Your Knowledge</p>
-        <a href="#kuis" class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Play Now</a>
-      </div>
-    </section>
-
-    <main class="quiz-container mt-5" id="kuis">
+    <main class="quiz-container" style="margin-top: 200px;" id="kuis">
 
       <div class="quiz-intro animate__animated animate__fadeIn">
         <h2>✨ Selamat Datang di Kuis Interaktif! ✨</h2>
@@ -153,7 +145,7 @@ if ($current_question === 0) {
       <?php if (isset($_SESSION['final_score']) && $current_question >= count($questions)): ?>
         <div class="result-container animate__animated animate__bounceIn">
           <h2>Selamat! Anda telah menyelesaikan kuis</h2>
-          <div class="score-display"><?php echo number_format($_SESSION['final_score'], 0); ?></div>
+          <div class="score-display h3">Skor Akhir : <?php echo number_format($_SESSION['final_score'], 0); ?></div>
           <div class="score-message">
             <?php
             if ($_SESSION['final_score'] == 100) {
@@ -167,7 +159,7 @@ if ($current_question === 0) {
             }
             ?>
           </div>
-          <button class="btn btn-custom" onclick="window.location.href='?q=0'">Mulai Ulang Kuis</button>
+          <button class="btn btn-custom mt-2" onclick="window.location.href='?q=0'">Mulai Ulang Kuis</button>
         </div>
       <?php else: ?>
         <div class="progress">
