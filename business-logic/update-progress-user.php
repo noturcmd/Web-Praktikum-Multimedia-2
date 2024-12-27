@@ -10,5 +10,13 @@ function updateProgressUser($level, $totalLevel, $userId, $con){
 }
 
 
+function updateSkor($skor, $userId, $con){
+    $query = "UPDATE users SET skor='$skor' WHERE id='$userId'";
+    $con = getConnection();
+    $con->exec($query);
+    $con = null;
+}
+
+
 
 ?>

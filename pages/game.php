@@ -161,12 +161,12 @@
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
               <li class="nav-item dropdown profile-dropdown ms-3">
                 <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
+                  <img src="../img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="profile/profile.php">My Profile</a></li>
                   <li><hr class="dropdown-divider bg-light"></li>
-                  <li><a class="dropdown-item" href="login.php">Logout</a></li>
+                  <li><a class="dropdown-item" href="../business-logic/validate-logout.php">Logout</a></li>
                 </ul>
               </li>
             <?php else: ?>

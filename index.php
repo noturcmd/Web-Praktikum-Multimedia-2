@@ -122,7 +122,7 @@ include "connection/db_connection.php";
                   <li>
                     <hr class="dropdown-divider bg-light">
                   </li>
-                  <li><a class="dropdown-item" href="business-logic/logout.php">Logout</a></li>
+                  <li><a class="dropdown-item" href="business-logic/validate-logout.php">Logout</a></li>
                 </ul>
               </li>
             <?php else: ?>

@@ -3,13 +3,17 @@
 session_start();
 
 include "../../connection/db_connection.php";
+include "../../business-logic/update-progress-user.php";
+
+
 $current_question = isset($_GET['q']) ? (int)$_GET['q'] : 0;
+
+$koneksi = getConnection();
 
 $query = "SELECT * FROM soal";
 $stm = $koneksi->prepare($query);
 $stm->execute();
 $user = $stm->fetchAll(PDO::FETCH_ASSOC);
-
 
 $questions = array();
 
@@ -33,6 +37,7 @@ for ($i = 0; $i < count($user); $i++) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['answer'])) {
     $_SESSION['answers'][$current_question - 1] = $_POST['answer'];
+    updateProgressUser($current_question, count($user), $_COOKIE['logusid'], $koneksi);
   }
 
   if ($current_question >= count($questions)) {
@@ -44,7 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $correct_answers += 1;
       }
     }
-    $_SESSION['final_score'] = ($correct_answers / count($questions)) * 100;
+    $skorAkhir = ($correct_answers / count($questions)) * 100;
+    updateSkor($skorAkhir, $_COOKIE['logusid'], $koneksi);
+    $_SESSION['final_score'] = $skorAkhir;
   }
 }
 
@@ -112,14 +119,14 @@ if ($current_question === 0) {
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
               <li class="nav-item dropdown profile-dropdown ms-3">
                 <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
+                  <img src="../../img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="pages/profile/profile.php">My Profile</a></li>
                   <li>
                     <hr class="dropdown-divider bg-light">
                   </li>
-                  <li><a class="dropdown-item" href="login.php">Logout</a></li>
+                  <li><a class="dropdown-item" href="../../business-logic/validate-logout.php">Logout</a></li>
                 </ul>
               </li>
             <?php else: ?>
