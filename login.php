@@ -1,13 +1,3 @@
-<?php
-
-include "connection/db_connection.php";
-include "business-logic/validate-login.php";
-
-validateLogin(getConnection());
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
