@@ -72,8 +72,8 @@ if (isset($_POST["signup"])) {
         }
     }
 } else {
+    $koneksi = null;
     header("location: ../login.php");
     exit();
 }
 
-$koneksi = null;

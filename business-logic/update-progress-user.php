@@ -17,6 +17,11 @@ function updateSkor($skor, $userId, $con){
     $con = null;
 }
 
-
-
+function getLevelUser($userId, $con){
+    $query = "SELECT level_kuis FROM users WHERE id='$userId'";
+    $con = getConnection();
+    $result = $con->query($query);
+    $con = null;
+    return $result->fetchAll();
+}
 ?>
