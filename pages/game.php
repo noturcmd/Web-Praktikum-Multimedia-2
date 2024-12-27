@@ -155,8 +155,23 @@
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="materi/materi.php">Materi</a></li>
             <li class="nav-item"><a class="nav-link fw-bold text-white text-decoration-underline" href="game.php">Game</a></li>
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="Quiz/quiz.php">Quiz</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-white" href="profile/profile.php">Profile</a></li>
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="about.php">About</a></li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item dropdown profile-dropdown ms-3">
+                <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="profile/profile.php">My Profile</a></li>
+                  <li><hr class="dropdown-divider bg-light"></li>
+                  <li><a class="dropdown-item" href="login.php">Logout</a></li>
+                </ul>
+              </li>
+            <?php else: ?>
+              <li class="nav-item ms-3">
+                <a class="btn btn-outline-warning fw-bold" href="login.php">Login</a>
+              </li>
+            <?php endif; ?>
           </ul>
         </div>
       </div>
