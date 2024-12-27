@@ -267,7 +267,7 @@
             <div class="flex-grow-1 text-start">
               <ul class="list-unstyled">
                 <li><strong>Nama:</strong> Ridawanul Bakhri</li>
-                <li><strong>NIM:</strong> K35220</li>
+                <li><strong>NIM:</strong> K3522068</li>
                 <li><strong>Jurusan:</strong> PTIK</li>
                 <li><strong>Fakultas:</strong> FKIP</li>
                 <li><strong>Universitas:</strong> Universitas Sebelas Maret</li>
