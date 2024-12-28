@@ -1,3 +1,22 @@
+<?php
+
+include "../../connection/db_connection.php";
+$idUser = $_COOKIE['logusid'];
+$query = "SELECT status_kuis FROM users WHERE id='$idUser'";
+$koneksi = getConnection();
+
+$result = $koneksi->query($query);
+$result = $result->fetchAll(PDO::FETCH_ASSOC);
+if($result[0]['status_kuis'] == "selesai"){
+  header("location: quiz-result.php");
+  exit();
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

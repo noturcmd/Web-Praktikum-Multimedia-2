@@ -1,3 +1,18 @@
+<?php
+
+include "../../connection/db_connection.php";
+$idUser = $_COOKIE['logusid'];
+$query = "SELECT skor, status_kuis FROM users WHERE id='$idUser'";
+$koneksi = getConnection();
+
+$result = $koneksi->query($query);
+$result = $result->fetchAll(PDO::FETCH_ASSOC);
+if($result[0]['status_kuis'] == "selesai"){
+  $skor = $result[0]['skor'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,16 +93,15 @@
       <?php
       session_start();
       
-      if(isset($_SESSION['quiz_score'])) {
-        $score = $_SESSION['quiz_score'];
-        $percentage = number_format($score, 1);
+      if($result[0]['status_kuis'] == "selesai") {
+        $percentage = number_format($skor, 1);
         
         echo '<div class="progress">';
         echo '<div class="progress-bar" role="progressbar" style="width: ' . $percentage . '%" ';
         echo 'aria-valuenow="' . $percentage . '" aria-valuemin="0" aria-valuemax="100"></div>';
         echo '</div>';
         
-        echo '<div class="score-display">' . $percentage . '%</div>';
+        echo '<div class="score-display">' . $percentage . '</div>';
         
         if($percentage >= 80) {
           echo '<p class="result-message">Excellent! You\'ve mastered this topic!</p>';
@@ -97,15 +111,13 @@
           echo '<p class="result-message">Keep learning! You\'ll do better next time!</p>';
         }
         
-        // Clear the session score
-        unset($_SESSION['quiz_score']);
       } else {
         echo '<p class="result-message">No quiz results available.</p>';
       }
       ?>
       
       <div class="mt-4">
-        <a href="quiz.php" class="btn btn-action">Try Again</a>
+        <a href="../../business-logic/update-status-kuis.php" class="btn btn-action">Try Again</a>
         <a href="../../index.php" class="btn btn-action">Home</a>
       </div>
     </div>

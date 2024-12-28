@@ -34,11 +34,9 @@ try {
     // Calculate percentage score
     $percentage_score = ($score / $total_questions) * 100;
     
-    $stmt = $conn->prepare("UPDATE users SET skor = ? WHERE id = ?");
-    $stmt->execute([$percentage_score, $user_id]);
-
-    // Redirect to results page with score
-    $_SESSION['quiz_score'] = $percentage_score;
+    $stmt = $conn->prepare("UPDATE users SET skor = ?, status_kuis = ? WHERE id = ?");
+    $stmt->execute([$percentage_score, "selesai", $user_id]);
+    
     header('Location: ../pages/Quiz/quiz-result.php');
     exit();
 } catch (PDOException $e) {
