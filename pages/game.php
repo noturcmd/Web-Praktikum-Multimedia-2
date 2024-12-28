@@ -164,14 +164,14 @@
                   <img src="../img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="profile/profile.php">My Profile</a></li>
+                  <li><a class="dropdown-item text-warning" href="profile/profile.php">My Profile</a></li>
                   <li><hr class="dropdown-divider bg-light"></li>
-                  <li><a class="dropdown-item" href="../business-logic/validate-logout.php">Logout</a></li>
+                  <li><a class="dropdown-item text-warning" href="../business-logic/validate-logout.php" onclick="return confirm('Yakin ingin logout?')">Logout</a></li>
                 </ul>
               </li>
             <?php else: ?>
               <li class="nav-item ms-3">
-                <a class="btn btn-outline-warning fw-bold" href="../login.php">Login</a>
+                <a class="btn btn-outline-warning fw-bold text-warning" href="../login.php">Login</a>
               </li>
             <?php endif; ?>
           </ul>

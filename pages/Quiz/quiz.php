@@ -140,7 +140,7 @@ if ($result[0]['status_kuis'] == "selesai") {
                   <li>
                     <hr class="dropdown-divider bg-light">
                   </li>
-                  <li><a class="dropdown-item" href="../../business-logic/validate-logout.php">Logout</a></li>
+                  <li><a class="dropdown-item" href="../../business-logic/validate-logout.php" onclick="return confirm('Yakin ingin logout?')">Logout</a></li>
                 </ul>
               </li>
             <?php else: ?>

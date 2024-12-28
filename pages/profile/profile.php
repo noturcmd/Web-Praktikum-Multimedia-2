@@ -14,6 +14,7 @@ $stm->bindParam(':id', $user_id);
 $stm->execute();
 $user = $stm->fetch(PDO::FETCH_ASSOC);
 
+$userImage = $user['image'];
 // Redirect jika user belum login
 if (!isset($_COOKIE['login'])) {
   header("Location: ../../login.php");
@@ -31,10 +32,14 @@ if (!isset($_COOKIE['login'])) {
   <link rel="shortcut icon" href="../../logo/logo_mulmed.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../../styles/parallax.css">
   <link rel="stylesheet" href="../../styles/profile.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    body {
+      height: 100vh;
+    }
+
     /* Adjust the size of the profile image */
     .profile-img {
       width: 45px;
@@ -43,6 +48,15 @@ if (!isset($_COOKIE['login'])) {
       /* Maintain aspect ratio with width */
       object-fit: cover;
       /* Ensure the image is not distorted */
+    }
+
+    .foto-profile {
+      width: 100px;
+      height: 100px;
+    }
+
+    #panel {
+      display: none;
     }
   </style>
 </head>
@@ -76,24 +90,15 @@ if (!isset($_COOKIE['login'])) {
             </li>
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
               <li class="nav-item">
-                <a class="nav-link fw-bold text-white text-decoration-underline" href="quiz.php">Quiz</a>
+                <a class="nav-link fw-bold text-white" href="../Quiz/quiz.php">Quiz</a>
               </li>
             <?php endif; ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="../about.php">About</a>
             </li>
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
-              <li class="nav-item dropdown profile-dropdown ms-3">
-                <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="../../img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="profile.php">My Profile</a></li>
-                  <li>
-                    <hr class="dropdown-divider bg-light">
-                  </li>
-                  <li><a class="dropdown-item" href="../../business-logic/validate-logout.php">Logout</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white" href="../../business-logic/validate-logout.php" onclick="return confirm('Yakin ingin logout?')">Logout</a>
               </li>
             <?php else: ?>
               <li class="nav-item ms-3">
@@ -104,7 +109,6 @@ if (!isset($_COOKIE['login'])) {
         </div>
       </div>
     </header>
-
     <main class="container" style="margin-top: 200px;">
       <div class="card shadow-lg animate__animated animate__fadeIn">
         <div class="card-header text-center">
@@ -112,7 +116,7 @@ if (!isset($_COOKIE['login'])) {
         </div>
         <form>
           <div class="profile-img-container mt-4">
-            <img src="../../img-users/no-photo.jpg" alt="User Photo" class="profile-img rounded-circle">
+            <img src="../../img-users/<?= $userImage ?>" alt="User Photo" class="profile-img rounded-circle foto-profile">
           </div>
           <div class="row p-4">
             <div class="col-md-6">
@@ -141,17 +145,44 @@ if (!isset($_COOKIE['login'])) {
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                   <label for="text" class="fw-bold text-start" style="width: 350px;"><i class="fas fa-leaf stat-icon"></i>Status Kuis</label>
-                  <input type="text" class="form-control-plaintext text-end" id="text" value="<?= $user['status_kuis']?>" readonly>
+                  <input type="text" class="form-control-plaintext text-end" id="text" value="<?= $user['status_kuis'] ?>" readonly>
                 </li>
               </ul>
             </div>
           </div>
         </form>
+        <div class="container text-center mt-5 mb-5">
+          <!-- Tombol Update -->
+          <button type="button" class="btn btn-outline-light border border-secondary text-dark me-3" id="flip">
+            Update Foto
+          </button>
+        </div>
+        <div id="panel" class="mb-5 mx-4">
+          <!-- Form untuk upload gambar -->
+          <form action="../logic/update-profile-user.php" method="post" enctype="multipart/form-data" id="updateAvatarForm" class="text-center mt-4">
+            <div class="mb-3">
+              <input type="hidden" name="user-id" value="<?= $_COOKIE["logusid"] ?>">
+              <label for="avatarInput" class="form-label">Pilih Gambar Baru</label>
+              <input type="file" id="avatarInput" class="form-control text-dark" accept="image/*" name="update-image">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload Gambar</button>
+          </form>
+        </div>
       </div>
+
     </main>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("#flip").click(function() {
+        $("#panel").slideToggle("slow");
+      });
+    });
+  </script>
 </body>
 
 </html>
