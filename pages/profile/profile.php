@@ -2,6 +2,8 @@
 include "../../connection/db_connection.php";
 
 // Ambil id user dari cookie
+
+$koneksi = getConnection();
 $cookie = $_COOKIE['logusmulmed'] ?? '';
 $user_id = substr($cookie, strpos($cookie, 'pp') + 2);
 
@@ -29,12 +31,19 @@ if (!isset($_COOKIE['login'])) {
   <link rel="shortcut icon" href="../../logo/logo_mulmed.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../../styles/parallax.css">
   <link rel="stylesheet" href="../../styles/profile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-
+    /* Adjust the size of the profile image */
+    .profile-img {
+      width: 45px;
+      /* You can adjust this to your preferred size */
+      height: 45px;
+      /* Maintain aspect ratio with width */
+      object-fit: cover;
+      /* Ensure the image is not distorted */
+    }
   </style>
 </head>
 
@@ -42,7 +51,7 @@ if (!isset($_COOKIE['login'])) {
   <div class="container-fluid p-0 m-0">
     <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
       <div class="container-fluid">
-        <!-- Logo -->
+        <!-- Logo dan Judul -->
         <a class="navbar-brand d-flex align-items-center" href="../../index.php">
           <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
           <span class="text-white fw-bold">Beastie Brain Tease</span>
@@ -65,12 +74,11 @@ if (!isset($_COOKIE['login'])) {
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="../game.php">Game</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-white" href="../quiz/quiz.php">Quiz</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-white text-decoration-underline" href="profile.php">Profile</a>
-            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white text-decoration-underline" href="quiz.php">Quiz</a>
+              </li>
+            <?php endif; ?>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="../about.php">About</a>
             </li>
@@ -80,7 +88,7 @@ if (!isset($_COOKIE['login'])) {
                   <img src="../../img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="pages/profile/profile.php">My Profile</a></li>
+                  <li><a class="dropdown-item" href="profile.php">My Profile</a></li>
                   <li>
                     <hr class="dropdown-divider bg-light">
                   </li>
@@ -89,7 +97,7 @@ if (!isset($_COOKIE['login'])) {
               </li>
             <?php else: ?>
               <li class="nav-item ms-3">
-                <a class="btn btn-outline-warning fw-bold" href="login.php">Login</a>
+                <a class="btn btn-outline-warning fw-bold" href="../../login.php">Login</a>
               </li>
             <?php endif; ?>
           </ul>
@@ -97,7 +105,7 @@ if (!isset($_COOKIE['login'])) {
       </div>
     </header>
 
-    <main class="container mt-5">
+    <main class="container" style="margin-top: 200px;">
       <div class="card shadow-lg animate__animated animate__fadeIn">
         <div class="card-header text-center">
           <h3 class="fw-bold mb-0"><i class="fas fa-user-circle me-2"></i>User Profile</h3>
@@ -128,16 +136,12 @@ if (!isset($_COOKIE['login'])) {
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <label for="level_hewan" class="fw-bold text-start" style="width: 350px;"><i class="fas fa-paw stat-icon"></i>Level Quiz Hewan</label>
-                  <input type="text" class="form-control-plaintext text-end" id="level_hewan" value="<?= $user['level_quiz_hewan'] ?? '0' ?> | <?= $user['score_quiz_hewan'] ?? '0' ?>" readonly>
+                  <label for="level_hewan" class="fw-bold text-start" style="width: 350px;"><i class="fas fa-paw stat-icon"></i>Skor Kuis</label>
+                  <input type="text" class="form-control-plaintext text-end" id="level_hewan" value="<?= $user['skor'] ?? '0' ?>" readonly>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <label for="text" class="fw-bold text-start" style="width: 350px;"><i class="fas fa-leaf stat-icon"></i>Level Quiz Tumbuhan</label>
-                  <input type="text" class="form-control-plaintext text-end" id="text" value="<?= $user['level_quiz_tumbuhan'] ?? '0' ?> | <?= $user['score_quiz_tumbuhan'] ?? '0' ?>" readonly>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <label for="level-game" class="fw-bold text-start" style="width: 350px;"><i class="fas fa-gamepad stat-icon"></i>Level Game</label>
-                  <input type="text" class="form-control-plaintext text-end" id="level-game" value="<?= $user['level_game'] ?? '0' ?> | <?= $user['score_game'] ?? '0' ?>" readonly>
+                  <label for="text" class="fw-bold text-start" style="width: 350px;"><i class="fas fa-leaf stat-icon"></i>Status Kuis</label>
+                  <input type="text" class="form-control-plaintext text-end" id="text" value="<?= $user['status_kuis']?>" readonly>
                 </li>
               </ul>
             </div>
@@ -151,3 +155,5 @@ if (!isset($_COOKIE['login'])) {
 </body>
 
 </html>
+
+<?php $koneksi = null ?>

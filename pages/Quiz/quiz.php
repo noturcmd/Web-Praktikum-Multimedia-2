@@ -224,3 +224,6 @@ if ($result[0]['status_kuis'] == "selesai") {
 </body>
 
 </html>
+<?php
+$koneksi = null
+?>

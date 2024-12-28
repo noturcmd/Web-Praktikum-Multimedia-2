@@ -226,3 +226,6 @@
 </body>
 
 </html>
+<?php
+$koneksi = null
+?>
