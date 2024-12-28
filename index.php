@@ -1,8 +1,3 @@
-<?php
-include "connection/db_connection.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,6 +68,11 @@ include "connection/db_connection.php";
       transform: scale(1.1);
       box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
     }
+
+    h2.text-white {
+      color: white;
+    }
+    
   </style>
 </head>
 
@@ -146,69 +146,13 @@ include "connection/db_connection.php";
     </section>
 
     <main id="section-materi">
-      <section id="materi" class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4 text-white">Materi</h2>
 
-          <div id="materiCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <!-- Item 1 -->
-              <div class="carousel-item active">
-                <div class="row align-items-center materi-background">
-                  <!-- Bagian kiri (gambar) -->
-                  <div class="col-md-6">
-                    <img src="path/to/your-image1.jpg" alt="Materi 1" class="img-fluid">
-                  </div>
-                  <!-- Bagian kanan (informasi singkat) -->
-                  <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 1: Temukan berbagai materi pembelajaran interaktif yang menarik dan mudah dipahami.</p>
-                    <a href="pages/materi/materi.php?id=1" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="carousel-item">
-                <div class="row align-items-center materi-background">
-                  <!-- Bagian kiri (gambar) -->
-                  <div class="col-md-6">
-                    <img src="path/to/your-image2.jpg" alt="Materi 2" class="img-fluid">
-                  </div>
-                  <!-- Bagian kanan (informasi singkat) -->
-                  <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 2:
-                      Untuk menempatkan carousel-item di luar section materi, kita bisa membuat struktur HTML di mana section dan carousel menjadi dua elemen terpisah, tetapi tetap menjaga tampilan dan fungsionalitas. Berikut adalah versi yang diperbarui dari kode yang memindahkan carousel-item di luar section materi tetapi masih mencakup semua konten yang relevan.</p>
-                    <a href="pages/materi/materi.php?id=2" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="carousel-item">
-                <div class="row align-items-center materi-background">
-                  <!-- Bagian kiri (gambar) -->
-                  <div class="col-md-6">
-                    <img src="path/to/your-image3.jpg" alt="Materi 3" class="img-fluid">
-                  </div>
-                  <!-- Bagian kanan (informasi singkat) -->
-                  <div class="col-md-6">
-                    <p class="text-justify text-white">Materi 3: Asah pemahamanmu dengan materi yang lebih menantang.</p>
-                    <a href="pages/materi/materi.php?id=3" class="btn btn-custom mt-3 text-white">Selengkapnya</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Navigasi Kiri-Kanan -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#materiCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden text-white">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#materiCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden text-white">Next</span>
-            </button>
-          </div>
+      <!-- Section Materi -->
+      <section id="materi">
+        <div class="container py-5">
+          <h2 class="text-center mb-4 text-white">Materi </h2>
+          <p class="text-center text-white">Tingkatkan pemahamanmu dengan materi pembelajaran!</p>
+          <a href="pages/materi/materi.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Ayo Belajar!</a>
         </div>
       </section>
 
