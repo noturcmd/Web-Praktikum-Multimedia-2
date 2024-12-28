@@ -38,7 +38,7 @@
               <a class="nav-link fw-bold text-white" href="../../index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white text-decoration-underline" href="../materi/materi.php">Materi</a>
+              <a class="nav-link fw-bold text-white text-decoration-underline" href="materi.php">Materi</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="../game.php">Game</a>

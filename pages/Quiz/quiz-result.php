@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "../../connection/db_connection.php";
 $idUser = $_COOKIE['logusid'];
 $query = "SELECT skor, status_kuis FROM users WHERE id='$idUser'";
@@ -21,6 +21,8 @@ if($result[0]['status_kuis'] == "selesai"){
   <title>Quiz Results</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/parallax.css">
+  <link rel="stylesheet" href="../../styles/StylePages.css">
   <style>
     body {
       background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
@@ -86,12 +88,65 @@ if($result[0]['status_kuis'] == "selesai"){
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid p-0 m-0">
+  <header class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+      <div class="container-fluid">
+        <!-- Logo dan Judul -->
+        <a class="navbar-brand d-flex align-items-center" href="../../index.php">
+          <img src="../../logo/logo_mulmed.png" alt="icon-owl" width="50" class="me-2">
+          <span class="text-white fw-bold">Beastie Brain Tease</span>
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="../../index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="../materi/materi.php">Materi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="../game.php">Game</a>
+            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white text-decoration-underline" href="quiz.php">Quiz</a>
+              </li>
+            <?php endif; ?>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-white" href="../about.php">About</a>
+            </li>
+            <?php if (isset($_COOKIE['logusmulmed'])): ?>
+              <li class="nav-item dropdown profile-dropdown ms-3">
+                <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../../img-users/no-photo.jpg" alt="User Profile" class="profile-img rounded-circle" width="40" height="40">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="../profile/profile.php">My Profile</a></li>
+                  <li><hr class="dropdown-divider bg-light"></li>
+                  <li><a class="dropdown-item" href="../../business-logic/validate-logout.php">Logout</a></li>
+                </ul>
+              </li>
+            <?php else: ?>
+              <li class="nav-item ms-3">
+                <a class="btn btn-outline-warning fw-bold" href="../../login.php">Login</a>
+              </li>
+            <?php endif; ?>
+          </ul>
+        </div>
+      </div>
+    </header>
     <div class="result-container animate__animated animate__fadeIn">
-      <h1 class="mb-4">Quiz Results</h1>
+      <h1 class="mb-4 text-white h2">Quiz Results</h1>
       
       <?php
-      session_start();
+
       
       if($result[0]['status_kuis'] == "selesai") {
         $percentage = number_format($skor, 1);
