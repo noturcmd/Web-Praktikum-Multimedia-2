@@ -9,6 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../styles/parallax.css">
   <link rel="stylesheet" href="../../styles/StylePages.css">
+  <link rel="shortcut icon" href="../../logo/logo_mulmed.png" type="image/x-icon">
   <style>
     .materi-card {
       transition: transform 0.3s;
@@ -61,7 +62,7 @@
             <li class="nav-item"><a class="nav-link fw-bold text-white text-decoration-underline" href="../materi/materi.php">Materi</a></li>
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="../game.php">Game</a></li>
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
-              <li class="nav-item"><a class="nav-link fw-bold text-white" href="quiz.php">Quiz</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="../Quiz/quiz.php">Quiz</a></li>
             <?php endif; ?>
             <li class="nav-item"><a class="nav-link fw-bold text-white" href="../about.php">About</a></li>
             <?php if (isset($_COOKIE['logusmulmed'])): ?>
