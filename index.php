@@ -161,7 +161,7 @@
         <div class="container py-5">
           <h2 class="text-center mb-4 text-white">Game</h2>
           <p class="text-center text-white">Asah kemampuanmu dengan berbagai game edukatif yang seru!</p>
-          <a href="pages/game/game.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mainkan Game</a>
+          <a href="pages/game.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mainkan Game</a>
         </div>
       </section>
 
@@ -170,7 +170,7 @@
         <div class="container py-5">
           <h2 class="text-center mb-4 text-white">Quiz</h2>
           <p class="text-center text-white">Uji pengetahuanmu dengan berbagai quiz yang menantang.</p>
-          <a href="pages/quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mulai Quiz</a>
+          <a href="pages/Quiz/quiz.php" class="btn btn-custom d-block mx-auto mt-3 text-white">Mulai Quiz</a>
         </div>
       </section>
     </main>
