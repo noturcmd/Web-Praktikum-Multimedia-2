@@ -105,7 +105,7 @@
               echo '<h5 class="card-title text-dark fw-bold">' . htmlspecialchars($row['judul_materi']) . '</h5>';
               echo '<h6 class="card-subtitle mb-2 text-muted">' . htmlspecialchars($row['mata_pelajaran']) . '</h6>';
               echo '<p class="card-text">' . substr(htmlspecialchars($row['materi']), 0, 100) . '...</p>';
-              echo '<button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#materiModal" data-id="' . $row['id_materi'] . '">Baca Selengkapnya</button>';
+              echo '<button class="btn btn-dark btn-sm" style=\'background-color: #FFD700; color: black\' data-bs-toggle="modal" data-bs-target="#materiModal" data-id="' . $row['id_materi'] . '">Baca Selengkapnya</button>';
               echo '</div>';
               echo '</div>';
               echo '</div>';
