@@ -15,6 +15,8 @@ $stm->execute();
 $user = $stm->fetch(PDO::FETCH_ASSOC);
 
 $userImage = $user['image'];
+var_dump($user['image']);
+// exit();
 // Redirect jika user belum login
 if (!isset($_COOKIE['login'])) {
   header("Location: ../../login.php");
@@ -159,7 +161,7 @@ if (!isset($_COOKIE['login'])) {
         </div>
         <div id="panel" class="mb-5 mx-4">
           <!-- Form untuk upload gambar -->
-          <form action="../logic/update-profile-user.php" method="post" enctype="multipart/form-data" id="updateAvatarForm" class="text-center mt-4">
+          <form action="../../business-logic/update-profile-user.php" method="post" enctype="multipart/form-data" id="updateAvatarForm" class="text-center mt-4">
             <div class="mb-3">
               <input type="hidden" name="user-id" value="<?= $_COOKIE["logusid"] ?>">
               <label for="avatarInput" class="form-label">Pilih Gambar Baru</label>
